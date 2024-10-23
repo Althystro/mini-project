@@ -1,13 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import Input from "./Input";
-import { createNewPost } from "../actions";
-
+import Input from "../../Input";
+import { createNewPost } from "@/app/actions";
 function Modal() {
   const initialPostState = {
-    name: "",
-    type: "",
-    image: "",
+    title: "",
+    description: "",
+
     available: true,
   };
 
@@ -53,13 +52,13 @@ function Modal() {
         </button>
         <Input
           title="Post Name"
-          name="name"
+          name="title"
           //   value={post.name}
           onChange={handleChange}
         />
         <Input
           title="Post Type"
-          name="type"
+          name="description"
           //   value={post.type}
           onChange={handleChange}
         />
